@@ -1,0 +1,416 @@
+.desktop-main-img{
+    display: block;
+}
+
+.mobile-main-img{
+    display: none;
+}
+
+
+@media (max-width:600px){
+    .main-img-pc{
+        .desktop-main-img{
+            display: none;
+        }
+        .mobile-main-img{
+            display: block !important;
+        }
+    }
+}
+
+.green-text{
+   color: #019444;
+}
+.grey-text{
+    color: #353C3B;
+}
+
+.stats-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.inner-stats-div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 2%;
+}
+
+
+.single-stat{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-wrap: nowrap;
+    flex-wrap: wrap;
+}
+
+
+.single-stat-text{
+    color: #353C3B;
+    font-weight: 600;
+}
+
+@media (max-width:768px){
+    .single-stat{
+        align-content: center !important;
+        width: 48%;
+    }
+}
+@media (max-width:500px){
+    .single-stat{
+        align-content: start !important;
+        justify-content: start;
+        text-wrap: wrap;
+        margin-bottom: 2%;
+    }
+}
+
+@media (max-width:880px){
+    .single-stat{
+        .single-stat-text{
+            font-size: small;
+            text-wrap: wrap;
+            /* font-weight: 400; */
+            color: #353C3B;
+        }
+    }
+}
+
+@media (max-width : 450px){
+    .single-stat{
+        h2{
+            font-size: x-large;
+        }
+    }
+}
+
+
+@media (min-width : 768px){
+    .single-stat{
+        width: 25%;
+    }
+}
+
+/* Calculator section */
+.investment-calc-section {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+@media (max-width: 750px) {
+    .investment-calc-section {
+        padding-left: 8%;
+        padding-right: 8%;
+        padding-bottom: 4%;
+        flex-direction: column !important;
+    }
+    
+    .investors-section {
+        flex-direction: column !important;
+    }
+}
+
+.green-box-calc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.green-box {
+    width: 12vw;
+    height: 21vh;
+    background-color: #019444;
+    color: #019444;
+}
+
+@media (max-width: 800px) {
+    .green-box-calc {
+        justify-content: center !important;
+        width: 100%;
+    }
+    .green-box {
+        display: none;
+    }
+    
+    .investment-img{
+        display: none !important;
+    }
+
+    .investment-img img {
+        display: none ;
+    }
+}
+
+.calculator {
+    background-color: white;
+    box-shadow: 0px 0px 20px rgba(152, 152, 152, 0.738);
+    border-radius: 20px;
+    padding: 5% 5%;
+    display: flex;
+    row-gap: 2vh;
+    text-wrap: nowrap;
+    flex-direction: column;
+}
+
+/* @media (min-width:860px){
+    .calculator{
+        width: 33vw;
+    }
+} */
+
+@media (max-width:450px) {
+    .calculator input{
+        width: 30% !important;
+    }
+}
+
+.calculator h5 {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.calculator input {
+    border-radius: 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    padding: 4x 8px;
+    width: 45%;
+    margin-left: auto;
+}
+
+.row-calc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 8px;
+
+
+    .investment_total{
+        width: 25%;
+    }
+}
+
+
+
+.amount-cal{
+    padding-left: 25%;
+    margin: auto;
+}
+
+.investment-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.investment-img img {
+    width: 50%;
+}
+
+.calc-heading {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+/* Investor */
+.investors-section{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #F7F9F8;
+
+    img{
+        width: 70%;
+    }
+
+    .investors-section-img{
+        display: flex;
+        align-items: center;  
+    }
+    .investors-section-text-content{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width:800px){
+    .investors-section{
+        padding: 8%;
+        flex-direction: column;
+
+        .investors-section-img{
+            justify-content: center;
+            width: 100%;
+
+            img{
+                width: 70% !important;
+                margin-bottom: 5%;
+            }
+        }
+
+        .investors-section-text-content{
+            width: 100%;
+            align-items: center;
+
+            p{
+                text-align: justify;
+            }
+        }
+    }
+}
+
+
+/* how-it-works-main-section */
+.how-it-works-main-section{
+    background-color: #D4F3EA;
+
+    .hiw-main-heading{
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .hiw-items{
+        display: flex;
+        margin: auto;
+    }
+}
+
+@media (max-width:768px) {
+    .hiw-items{
+        flex-direction: column;
+    }
+
+    .how-it-works-main-section{
+        padding-top: 0%;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    .hiw-item img{
+        width: 50%;
+    }
+}
+
+.hiw-item{
+    display:flex ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+
+/* project-owners-section */
+.project-owners-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: #F7F9F8;
+
+    img{
+        width: 80%;
+    }
+    
+    .project-owners-section-img{
+        display: flex;
+        align-items: center;  
+        justify-content: end;
+    }
+    .project-owners-section-text-content{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width:800px){
+    .project-owners-section{
+        flex-direction: column !important;
+        padding: 8%;
+    }
+
+    .project-owners-section-text-content{
+        align-items: center;
+        width: 100%;
+         
+        h5{
+            text-align: center;
+            font-size: large;
+        }
+
+        h4{
+            font-size: x-large;
+        }
+
+        p{
+            text-align: justify;
+        }
+    }
+    .project-owners-section-img{
+        justify-content: center !important;
+        width: 100%;
+
+        img{
+            width: 70% !important;
+        }
+    }
+}
+
+
+
+
+/*  */
+.thumbsup-section{
+    background-image: url("/assets/PNG/thumbs-up.png");
+    background-position-y: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    
+
+    .thumbsup-inner-div{
+        padding-top: 3%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 20rem;
+
+        .thumbs-up-text{
+            text-align: center;
+            padding-bottom: 5%;
+            color: #676C6B;
+            padding-left: 8%;
+            padding-right: 8%;
+        }
+
+        div{
+            text-align: center;
+            img{
+                width: 100%;
+                margin-bottom: -2%;
+            }     
+        }
+        
+    }
+    
+}

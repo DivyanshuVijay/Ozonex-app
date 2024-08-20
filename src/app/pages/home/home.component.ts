@@ -1,42 +1,56 @@
 import { Component } from '@angular/core';
-// core version + navigation, pagination modules:
-import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
-// import Swiper and modules styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import { SwiperModule } from 'swiper/angular';
+import SwiperCore, {
+  A11y,
+  Autoplay,
+  Navigation,
+  Pagination,
+  Scrollbar,
+  SwiperOptions,
+} from 'swiper';
 
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'vertical',
-  loop: true,
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
+// Install the required modules
+SwiperCore.use([Navigation, Autoplay, Pagination, Scrollbar, A11y]);
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-});;
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [SwiperModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css'] // Ensure this is correct
 })
 export class HomeComponent  {
   
- 
+  configTest: SwiperOptions = {
+    slidesPerView: 5,
+    spaceBetween: 50,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    loop:true,
+    
+    navigation: true,
+    pagination: { clickable: true},
+    scrollbar: { draggable: true},
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      720: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 50,
+      },
+    }
+  }
+
+  dataBrand = ['forbes.png', 'Business-Standard.png', 'cointelegraph.png', 'Entrepreneur.png', 'marketwatch.png'];
 }

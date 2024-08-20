@@ -1,100 +1,114 @@
-
-
-
-.navbar{
-    position: relative;
-    top: 0;
-}
-
-
-nav {
-    width: 100%;
-    z-index: 9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 9vh;
-    gap: 2rem;
-}
-
-.nav__links{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    gap: 2rem;
-    list-style: none;
-    color: black;
-    
-}
-
-.nav__links a {
-    font-weight: 500;
-    text-decoration: none;
-    color: #262626;
-
-    margin-right: 5px;
-}
-
-.home_list a{
-    font-weight: 500;
-    text-decoration: none;
-    color:#019444;
-}
-
-.nav__links a:hover {
-    transition: 0.5s;
-    color: #019444;
-}
-
-.nav__btns{
-    margin-left: 14rem;
-    display: flex;
-    gap: 2rem;
-}
-
-.nav__btn{
-    /* width: 4.5rem; */
-    height: 2rem;
-    cursor: pointer;
+*{
+    margin: 0;
+    padding-top: 0;
 }
 
 /* Header */
 .header_section{
-    position: absolute;
     display: flex;
     align-items: center;
     flex-direction: column;
-
+    justify-content: center;
+    width: 100%;
+    
     h1{
         color: #019444;
+        font-family: 'Manrope', 'Regular 400';
     }
 }
+
+/* .header-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.main-img{
+    width: 85%;
+}
+
+
+
+@media (max-width:500px){
+    .main-img{
+        width: 100% !important;
+    }
+
+    .main-heading{
+        font-size: x-large;
+    }
+}
+
 .as_seen{
     color: grey;
     border: 1px solid grey;
-    padding: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 0.5%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
     border-radius: 10px;
+    font-size: small;
+}
+
+@media (max-width : 500px){
+    .as_seen{
+        margin-top: 4%;
+        margin-bottom: -4%;
+    }
+}
+
+/* Ensure swiper elements are visible */
+.swiper-img {
+    max-width: 100%;
+    height: auto;
+}
+
+swiper{
+    width: 85%;
+    height: 30%;
+    position: relative;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding-left: 4.5%;
+    padding-right: 4.5%;
+}
+
+@media (max-width : 450px){
+    .as_seen{
+        font-size: small;
+    }
+
+    swiper{
+        padding-left: 6.5%;
+        padding-right: 6.5%;
+    }
+
+    .brand-sec{
+        height: 130px;
+    }
+}
+
+.brand-sec {
+    width: 100%;
+    height: 100px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15%;
 }
 
 /* Description Section */
 .description {
-    position: relative;
-    top: 1020px;
     height: auto;
-    width: 100vw; /* Full width of the viewport */
     background-color: #F7F9F8;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-left: -130px;
+    margin-left: 0;
 }
 
 .description img {
-    height: 400px; /* Adjust the image height as needed */
+    height: 400px; 
     margin-right: 100px;
 }
 
@@ -102,92 +116,135 @@ nav {
     display: flex;
     flex-direction: column;
     width: 40rem;
-    margin-left: 20px;
-}
+    padding: 2%}
 
 .description .info h2 {
     color: #019444;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
 }
 
 .description .info p {
     color: #676C6B;
     text-align: start;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+}
+
+@media (max-width:768px){
+    .description{
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
 }
 
 .rwa_token{
-    position: relative;
-    top: 1020px;
-    /* width: 100vw; */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-left: -20px;
-    
-    .background{
-        width: 100vw; /*Full width of the viewport*/
-        z-index: -45;
-        height: auto;
-    }
-
+    text-align: center;
+    background-image: url("/assets/PNG/rwa_token.png");
+    height: auto;
+    background-size: cover;
+    padding-top: 3%;
+    padding-bottom: 4%;
+    padding-left: 8%;
+    padding-right: 8%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
     h2{
-        position: absolute;
-        top: 4.8rem;
         color: #019444;
     }
-
-    p{
-        position: absolute;
+    .p_token{
         color: #676C6B;
-        top: 7.5rem;   
+        font-weight: 400;
+        margin-bottom: 2%;
     }
-    .buttons{
-        display: flex;
-        flex-direction: row;
-        position: absolute;
-        gap: 5rem;
 
-        .button{
+    .rwatoken_button_list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        /* align-items: center; */
+        /* column-gap: 5rem; */
+        text-wrap: wrap;
+        row-gap: 2rem;
+        margin: auto;
+        
+        .rwatoken_button{
             display: flex;
+            text-wrap: wrap;
             flex-direction: column;
             align-items: center;
             cursor: pointer;
             img{
-
-                height: 7rem;
-                width: 7rem;
+                height: 6rem;
+                width: 6rem;
             }
             p{
-                top: 6.6rem;
+                color: #676C6B;
+                font-weight: 400;
             }
         }
     }
-    button{
-        position: absolute;
-        top: 22rem;
+    rwatoken_button{
+        color: #676C6B;
+        padding: 1%;
+        padding-left: 1%;
+        padding-right: 1%;
         box-shadow: 3px 1px 50px rgb(203, 203, 203);
+
+        .title{
+            font-size: medium;
+        }
     }
-    
+
+    button{
+        padding: 0.5% 1% ;
+    }
+    button:hover{
+        background-color: #01944351;
+    }
+}
+@media (max-width :768px){
+    .rwa_token{
+        .rwatoken_button_list .rwatoken_button{
+            padding: 1.5%;
+            padding-right: 3%;
+            padding-left: 3%;
+            width: 33.33%;
+        }
+    }
+}
+
+@media (max-width :320px){
+    .rwa_token{
+        .rwatoken_button_list .rwatoken_button{
+            p{
+                font-size: small;
+            }
+        }
+    }
 }
 
 .nft_market_place{
-    position: relative;
-    top: 1060px;
+    justify-content: center;
+    background-color: #F7F9F8;
     display: flex;
     flex-direction:row ;
     align-items: center;
-    gap: 5rem;
-    img{
-        height: 20rem;
-    }
+    margin: auto;
+    padding-left: 8%;
+    padding-right: 8%;
+    margin-bottom: 2%;
+    padding-bottom: 4%;
+    padding-top: 4%;
 
+    .image img{
+        width: 70%;    
+    }
+    
     .text{
+        width: 50%;
         h2{
             color: #019444;
         }
         p{
             color: #676C6B;
-
             strong{
                 color: black;
             }
@@ -195,18 +252,41 @@ nav {
     }
 }
 
+@media (max-width: 768px){
+    .nft_market_place{
+        flex-direction: column;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        
+        .image img{
+            width: 80%;
+            margin-left: 12%;
+        }
+        .text{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-left: 3%;
+            padding-right: 3%;
+        }
+    }
+}
 
 /* otc_platform */
 .otc_platform{
-    position: relative;
-    top:1100px;
     display: flex;
+    padding: 1%;
     flex-direction: row;
     align-items: center;
     justify-content:center ;
+    flex-wrap: wrap;
     gap: 4rem;
-    background-color: #E9F9F4;
+    background-color: #F4FCF9;
     border-radius: 24px;
+    margin: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
 
     .feature_grid{
         margin-top: 2rem;
@@ -214,7 +294,7 @@ nav {
 
     .grid_image{
         height: 4.5rem;
-        width: 4.5rem;
+        width: 4.5rem;   
     }
 
     h2{
@@ -226,61 +306,93 @@ nav {
     }
 
     .image{
-        /* position: absolute; */
-        height: 25rem;
-        margin-bottom: 3rem;
+        width: 70%;
+        margin-bottom: 1rem;
+    }
+
+    .info_div{
+        padding-left: 5rem;
+        p{
+            font-weight: 450;
+        }
+    }
+
+    .grid_text{
+        font-family: 'Manrope', 'Regular 400';
+        color: #353C3B;
     }
 }
 
+.div_otc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .otc_platform{
+        padding-left: 8%;
+        padding-right: 8%;
+        margin-top: 2%;
+        .image{
+            width: 50%;
+        }
+        h2{
+            text-align: center;
+        }
+        
+        .info_div{
+            padding-left: 0;
+            padding: 3%;
+
+            .desc{
+                text-align: center;
+            }
+        }
+    }
+    
+    .div_otc{
+        
+        flex-direction: column;
+    }
+}
 
 /* transparent */
 .transparent{
-    position: relative;
-    top: 1150px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 3%;
     h2{
-       
+        margin-bottom: 1%;
+        text-align: center;
+        font-family: 'Manrope', 'Regular 400';
+        color: #353C3B;
         span{
             color: #019444;
         }
     }
     p{
+        padding: 0.5%;
+        text-align: center;
         color: #676C6B;
-        width: 60rem;
+        padding-top: 0;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     img{
-        margin-top: 5px;
-        width: 60rem;
+        margin-top: 2%;
+        width: 70%;
     }
 }
 
-/* discord_section */
-.discord_section{
-    position: relative;
-    top:1200px;
-    height: 60vh;
-    width: 99vw;
-    margin-left: -115px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #E9F9F4;
-
-
-
-    .join_discord{
-        cursor: pointer;
+@media (max-width:768px){
+    .transparent{
+        padding-left: 8%;
+        padding-right: 8%;
+        img{
+            margin-top: 2%;
+            width: 90%;
+        }
     }
-    
 }
-
-
-/* swiper */
-.swiper {
-    width: 600px;
-    height: 300px;
-  }
